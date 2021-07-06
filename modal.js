@@ -43,7 +43,25 @@ const stopPropagation = function(e) {
   e.stopPropagation()
 }
 
-document.forms["reserve"].addEventListener("submit", function(e) {
-  e.preventDefault()
-  alert('Bravo! Inscription validée')
-})
+
+
+document.forms["reserve"].addEventListener("submit", function (e) {
+
+
+  var erreur;
+  var inputs = this;
+  
+  for (var i = 0; i < inputs.length; i++){
+      if (!inputs[i].value) {
+          erreur = "Veuillez renseigner tous les champs"
+      }
+      
+  }
+  
+  if (erreur) {
+      e.preventDefault();
+      document.getElementById("erreur").innerHTML = erreur;
+      return false;
+  }
+  
+  });
