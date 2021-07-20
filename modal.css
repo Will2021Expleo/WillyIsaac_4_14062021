@@ -188,8 +188,6 @@ main {
   margin: 5% auto;
   width: 100%;
   max-width: 500px;
-  animation-name: modalopen;
-  animation-duration: var(--modal-duration);
   background: #232323;
   border-radius: 10px;
   overflow: hidden;
@@ -228,12 +226,12 @@ input {
 
 .formData[data-error]::after {
   content: attr(data-error);
-  font-size: 0.6em;
+  font-size: 0.5em;
   color: #e54858;
   display: block;
   margin-top: 7px;
   margin-bottom: 7px;
-  text-align: right;
+  text-align: left;
   line-height: 0.3;
   opacity: 0;
   transition: 0.3s;
@@ -597,3 +595,67 @@ footer {
     opacity: 1;
   }
 }
+
+
+/* Validation Message */
+
+.modal-confirm {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+  height: 100%;
+  text-align: center;
+}
+
+.msg-confirm {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.btn-closed {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 2rem;
+  font-size: 1.125rem;
+  color: white;
+  background: #FE142F;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+  .modal-confirm {
+    padding: 2rem;
+    height: calc(100vh - 4rem);
+  }
+}
+
+
+/* Footer */
+
+footer {
+  padding: 0px 2.5vw;
+}
+
+.copyrights {
+  margin: 3rem 0px;
+  font-size: 1rem;
+  color: #FE142F;
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    padding: 0px;
+  }
+
+  .copyrights {
+    margin: 1rem 0px;
+    text-align: center;
+  }
+}
+
+
