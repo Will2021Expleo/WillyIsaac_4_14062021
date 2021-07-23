@@ -16,7 +16,7 @@ const form = document.getElementById("form")
 
 
 // Element pour le message de validation
-let confirmationValidation = document.querySelector("modal-confirm");
+let confirmationValidation = document.querySelector(".modal-confirm");
 
 
 
@@ -32,12 +32,16 @@ e.preventDefault()
 
 closeModalBtn.addEventListener("click", closeModal);
 
+// close modal form
 function closeModal(e) {
   modalbg.style.display = "none"
   form.style.display = "block"
   confirmationValidation.style.display = "none"
 }
 
+document.querySelector(".close").addEventListener("click", function() {
+  window.location.reload();
+});
 /*
   modalbg.addEventListener("click", closeModal)//willy
   modalbg.querySelector('.close').addEventListener('click', closeModal)
