@@ -179,17 +179,14 @@ function validate() { //fonction
     }
 }
 
-
 /* Envoi du formulaire */
-
-form.addEventListener("submit", function (e) { // form sending
+form.addEventListener("submit", function (e) {
     e.preventDefault();
     validate();
 });
 
 
 /* Fermeture de la modal de confirmation d'inscription */
-
 document.querySelector("#btn-closed").addEventListener("click", function() {
     window.location.reload();
 }); // close validation message

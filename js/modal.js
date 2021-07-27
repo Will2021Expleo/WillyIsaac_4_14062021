@@ -42,28 +42,4 @@ function closeModal(e) {
 document.querySelector(".close").addEventListener("click", function() {
   window.location.reload();
 });
-/*
-  modalbg.addEventListener("click", closeModal)//willy
-  modalbg.querySelector('.close').addEventListener('click', closeModal)
-  modalbg.querySelector('.content').addEventListener('click', stopPropagation)
 
-
-
-//close modal form : willy
-function closeModal(event) {
-  if (modalbg === null) return
-  event.preventDefault()
-  modalbg.style.display = "none";
-  
-  modalbg.removeEventListener("click", closeModal)//willy
-  modalbg.querySelector('.close').removeEventListener('click', closeModal)
-  modalbg.querySelector('.content').removeEventListener('click', stopPropagation)
- 
-}
-//stop la propagation de l'évenement "closeModal" à l'ensemble de la fenêtre
-const stopPropagation = function (event) {
-  event.stopPropagation()
-}
-
-
-*/
