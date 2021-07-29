@@ -187,6 +187,7 @@ main {
 .content {
   margin: 5% auto;
   width: 100%;
+  height: fit-content;
   max-width: 500px;
   background: #232323;
   border-radius: 10px;
