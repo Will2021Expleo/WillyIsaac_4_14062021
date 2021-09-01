@@ -19,7 +19,7 @@ function validateFirstName(firstName, firstNameValue) {
     } else if (!firstNameValue.match(regexName)) { //if value firstNameValue is not included in the regex
         firstName.parentNode.setAttribute('data-error-visible', "true"); // write "data-error-visible = true" 
         firstName.parentNode.setAttribute('data-error', 'Les chiffres ne sont pas autorisés'); // error message
-        return false; //return if input is not valide
+        return false; //return false if input is not valide
 
     } else if (firstNameValue.length < 2) { //si la longueur du champ est inférieur à 2 caractères
         firstName.parentNode.setAttribute('data-error-visible', "true"); //j'écris data-error = vrai dans l'ID parent de first
